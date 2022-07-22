@@ -1,0 +1,18 @@
+{
+  "name": "systemjs-test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently 'rollup -c -w' 'serve public'",
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "Matthias Hryniszak <padcom@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "rollup": "^2.77.0",
+    "serve": "^14.0.1"
+  }
+}
