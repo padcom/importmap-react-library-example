@@ -1,21 +1,25 @@
 {
-  "name": "systemjs-test2",
+  "name": "library1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently 'rollup -c -w' 'serve -C -p 3001 dist'",
+    "start": "concurrently 'npm run build:watch' 'npm run serve'",
     "build": "rollup -c",
-    "serve": "npx serve dist"
+    "build:watch": "npm run build -- -w",
+    "serve": "serve -C -p 3001 dist"
   },
   "keywords": [],
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^7.3.0",
-    "react": "^18.2.0",
     "rollup": "^2.77.0",
     "rollup-plugin-jsx": "^1.0.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "serve": "^14.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
   }
 }
